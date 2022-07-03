@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "API for Gama Lacrei ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StaticDreamstate/GamaLacrou.git"
+  },
+  "keywords": [
+    "GamaAcademy",
+    "GamaLacrou",
+    "HandsOn4"
+  ],
+  "author": "HandsOn4 Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StaticDreamstate/GamaLacrou/issues"
+  },
+  "homepage": "https://github.com/StaticDreamstate/GamaLacrou#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
