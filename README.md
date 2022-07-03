@@ -14,9 +14,9 @@ de colaboradores: </p>
 <h4>Time Frontend</h4>
 <br>
 <ul>
+<a href="https://github.com/Egobbato/"><li>Eduardo Gobbato</li></a>
 <a href="https://github.com/joaotoni/"><li>João Antônio</li></a>
 <a href="https://github.com/JoaoVitorLiberato/"><li>João Vitor</li></a>
-<a href="https://github.com/Egobbato/"><li>Eduardo Gobbato</li></a>
 </ul>
 <br>
 
