@@ -25,6 +25,7 @@ de colaboradores: </p>
 <br>
 <ul>
 <a href="https://github.com/99arielsr/"><li>Ariel Rodrigues</li></a>
+<a href="https://github.com/PabloCariello/PabloCariello">Pablo Cariello</li></a>
 <a href="https://github.com/StaticDreamstate/"><li>Yuri</li></a>
 </ul>
 <br>
