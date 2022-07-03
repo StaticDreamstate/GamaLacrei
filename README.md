@@ -8,6 +8,7 @@ de colaboradores: </p>
 <h4>Time UX/UI</h4>
 <br>
 <li>Dandara Mendes</li>
+<li>Fabrício Silva</li>
 <li>Matheus Marques</li>
 <br>
 
