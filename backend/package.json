@@ -23,5 +23,8 @@
   "homepage": "https://github.com/StaticDreamstate/GamaLacrou#readme",
   "dependencies": {
     "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
   }
 }
