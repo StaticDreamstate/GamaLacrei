@@ -31,8 +31,7 @@ export  const DataStyled = styled.div`
         font-size: 16px;
         line-height: 150%;
         letter-spacing: 0.02em;
-
-color: #000000;
+        color: #000000;
     }
 
     .field input{
@@ -40,11 +39,18 @@ color: #000000;
         padding: 0.5rem;
     }
 
+    .field select{
+        width: 100%;
+        max-width: 340px;
+        padding: 0.5rem;
+        margin-top: 0.2rem;
+    }
+/* 
     .field textarea{
         width: 100%;
         padding: 4rem;
         resize: none;
     }
-    
+     */
 
 `

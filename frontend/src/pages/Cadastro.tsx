@@ -6,8 +6,8 @@ export default function Cadastro (){
     return(
         <>
             <Header />
-            {/* <PreCadastro /> */}
-            <DadosPessoais/>
+            <PreCadastro />
+            {/* <DadosPessoais/> */}
         </>
     )
 }

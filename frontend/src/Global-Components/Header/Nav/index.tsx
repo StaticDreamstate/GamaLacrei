@@ -5,9 +5,9 @@ export default function Nav() {
         <>
             <NavStyled>
                 <ul>
-                    <li>LACREI</li>
-                    <li>LACREI SAÚDE</li>
-                    <li>AJUDA</li>
+                    <li>Quem somos</li>
+                    <li>Entrar</li>
+                    <li>Ajuda</li>
                 </ul>
             </NavStyled>
         </>
