@@ -7,6 +7,7 @@ type SetupOptions = {
   isTest?: boolean;
   port?: number;
 };
+
 export default class App {
   private instance: Application;
   private defaultPort: number = 4000;
@@ -25,8 +26,7 @@ export default class App {
     if (options.isTest) return;
 
     this.instance.listen(selectedPort, () =>
-      console.log(`[OK] Servidor conectado. [Porta TCP ${selectedPort}]`);
-    );
+      console.log(`[OK] Servidor conectado. [Porta TCP ${selectedPort}]`));
   }
 
   getInstance() {

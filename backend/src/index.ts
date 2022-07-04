@@ -1,5 +1,5 @@
 import App from "./infra/app";
 
-const app = new App();
+const application = new App();
 
-app.setup({ port: 4000 });
+application.setup({ port: 4000 });
