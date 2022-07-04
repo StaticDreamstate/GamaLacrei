@@ -1,5 +1,5 @@
 import React from "react"
-import Cadastro from "./pages/Cadastro"
+import Cadastro from "./pages/PreCadastro"
 import Login from "./pages/Login"
 
 
