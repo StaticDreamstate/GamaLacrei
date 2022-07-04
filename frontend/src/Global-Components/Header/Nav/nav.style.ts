@@ -20,9 +20,15 @@ export const NavStyled = styled.nav`
            color: #FFFFFF;
            cursor: pointer;
 
+           &:nth-child(1){
+            color: #DF1098 ;
+           }
+
            &:hover{
                 color: #DF1098 ;
+                transition: 0.4s all ease-in-out;
            }
+
         }
     }
 

@@ -1,12 +1,15 @@
-import {FormStyled ,DivStyled } from "./FirstStyle"
+import {  DivStyled } from "./FirstStyle"
 
-export default function PreCadastro (){
-    return(
-        <FormStyled>
-            <DivStyled>
-                <h3>Estado</h3>
-                <input type="text" autoComplete="on" />
-            </DivStyled>
-        </FormStyled>
+export default function PreCadastro() {
+    return (
+
+        <DivStyled>
+            <form>
+                <div className="field">
+                    <label htmlFor="estado">Estado</label>
+                    <input type="search" name="estado" id="estado" />
+                </div>
+            </form>
+        </DivStyled>
     )
 }

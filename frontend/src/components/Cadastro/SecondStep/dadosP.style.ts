@@ -2,14 +2,12 @@ import styled from "styled-components"
 
 
 
-
-
-export  const DivStyled = styled.div`
+export  const DataStyled = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 90vh;
+    min-height: 125vh;
     padding: 0 2rem;
     
     
@@ -21,23 +19,31 @@ export  const DivStyled = styled.div`
     }
 
     .field{
-        padding-bottom: 0.5rem;
+        padding-bottom: 0.7rem;
+      
     }
 
     .field label{
         display: block;
         font-family: 'Nunito', sans-serif;
         font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
+        font-weight: 600;
+        font-size: 16px;
         line-height: 150%;
-        color: #585858;
-        padding-bottom: 0.2rem;
+        letter-spacing: 0.02em;
+
+color: #000000;
     }
 
     .field input{
         width: 100%;
         padding: 0.5rem;
+    }
+
+    .field textarea{
+        width: 100%;
+        padding: 4rem;
+        resize: none;
     }
     
 
