@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/StaticDreamstate/GamaLacrou.git"
+    "url": "git+https://github.com/StaticDreamstate/GamaLacrei.git"
   },
   "keywords": [
     "GamaAcademy",
@@ -18,9 +18,9 @@
   "author": "HandsOn4 Team",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/StaticDreamstate/GamaLacrou/issues"
+    "url": "https://github.com/StaticDreamstate/GamaLacrei/issues"
   },
-  "homepage": "https://github.com/StaticDreamstate/GamaLacrou#readme",
+  "homepage": "https://github.com/StaticDreamstate/GamaLacrei#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "crypto-js": "^4.1.1",
