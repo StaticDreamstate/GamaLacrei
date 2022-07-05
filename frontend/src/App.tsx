@@ -1,18 +1,16 @@
-import React from "react"
-import DadosPessoais from "./components/Cadastro/Dados-pessoais/cadastro-dados-pessoais"
-import Header from "./Global-Components/Header"
-import Login from "./pages/Login"
-
+import React from "react";
+import DadosPessoais from "./components/Cadastro/Dados-pessoais/cadastro-dados-pessoais";
+import { DadosProfissionais } from "./components/Cadastro/Dados-profissionais/dados-profissionais";
+import Header from "./Global-Components/Header";
+import Login from "./pages/Login";
 
 function App() {
- 
-
   return (
     <>
-    <Header />
-      <DadosPessoais/>
+      <Header />
+      <DadosProfissionais />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -32,5 +32,6 @@ export const DivDados = styled.div`
   .field input {
     width: 100%;
     padding: 0.5rem;
+    border-radius: 8px;
   }
 `;
