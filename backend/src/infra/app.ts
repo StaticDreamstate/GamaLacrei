@@ -18,6 +18,7 @@ export default class App {
 
   async setup(options: SetupOptions): Promise<void> {
     const selectedPort = options.port ? options.port : this.defaultPort;
+    this.instance.use(Express.static('public'));
     this.instance.use(Express.json());
     this.instance.use(BaseRoutes);
 
