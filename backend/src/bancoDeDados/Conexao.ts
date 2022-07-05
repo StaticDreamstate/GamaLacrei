@@ -34,7 +34,7 @@ export default class Conexao {
         }
     }
 
-    getIstance() {
+    getInstance() {
         return this.instancia;
     }
 

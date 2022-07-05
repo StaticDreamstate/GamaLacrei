@@ -1,4 +1,4 @@
-import { DataTypes } from "sequelize";
+import {DataTypes} from "sequelize";
 import permissoes from "../constantes/permissoes";
 import Conexao from "../bancoDeDados/Conexao";
 
@@ -7,24 +7,24 @@ export class Usuario {
     nomeModelo: string = "usuario";
 
     constructor(conexao: Conexao) {
-        const con = conexao.getIstance();
+        const con = conexao.getInstance();
 
     this.instancia = con.define(
         this.nomeModelo, {
             id: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.INTEGER(),
                 primaryKey: true,
                 autoIncrement: true,
               },
               nivel: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.INTEGER(),
                 defaultValue: permissoes.USUARIO,
               },
               nome: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(255),
               },
               email: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(255),
               },
               senha: {
                 type: DataTypes.STRING(300),
@@ -33,10 +33,10 @@ export class Usuario {
                 type: DataTypes.STRING(300),
               },
               createdAt: {
-                type: DataTypes.DATE,
+                type: DataTypes.DATE(),
               },
               updatedAt: {
-                type: DataTypes.DATE,
+                type: DataTypes.DATE(),
               },
         },
         {
