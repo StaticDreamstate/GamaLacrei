@@ -1,95 +1,69 @@
-/* O banco de dados ainda está sendo modelado. Esse script é apenas uma 
- * base e pode ser alterado total ou parcialmente a qualquer momento. */
+drop database lacrei;
 
-DROP DATABASE IF EXISTS `Lacrei_Database`;
-CREATE DATABASE `Lacrei_Database`;
-USE `Lacrei_Database`;
+create database lacrei;
 
-/* Informações de PRÉ-CADASTRO. */
+CREATE TABLE `lacrei`.`profissional` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome_completo` VARCHAR(200) NOT NULL,
+  `email` VARCHAR(200) NOT NULL,
+	`estado` VARCHAR(2), 
+	`prefixo_profissao` VARCHAR(10) NOT NULL,
+	`registro_profissional` VARCHAR(45) NOT NULL,
+	`senha` VARCHAR(255) NOT NULL,
+	`foto_perfil` VARCHAR(255),
+	`descricao_foto` VARCHAR(255),
+	`sobre_mim` VARCHAR(255),
+	`especialidade_clinica` VARCHAR(45),
+	`foto_identificacao` VARCHAR(255),
+	`carta_entrada` VARCHAR(255),
+	`createdAt` DATE, 
+	`updatedAt` DATE, 
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK_email` (`email`));
 
-CREATE TABLE `profissionais` (
-	`id` int NOT NULL AUTO_INCREMENT,
-	`nome` varchar(150) NOT NULL,
-	`email` varchar(150) NOT NULL,
-	`prefixo` varchar(10) NOT NULL,
-	`registro` int NOT NULL,
-	`senha` varchar(250) NOT NULL,
-	`data_cadastro` datetime DEFAULT NOW() NOT NULL,
-	PRIMARY KEY(`id`)
-) ENGINE = InnoDB DEFAULT CHARSET = latin1;
+	CREATE TABLE `lacrei`.`consultorio` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `telefone_fixo` VARCHAR(20),
+  `telefone_celular` VARCHAR(20),
+  `whatsapp` VARCHAR(20),
+  `modalidade_atendimento` VARCHAR(255) NOT NULL,
+  `acessibilidade` VARCHAR(255) NOT NULL,
+  `horarios_funcionamento` VARCHAR(255) NOT NULL,
+  `dias_funcionamento` VARCHAR(255) NOT NULL,
+  `convenios` VARCHAR(255) NOT NULL,
+  `createdAt` DATE,
+  `updatedAt` DATE,
+   PRIMARY KEY (`id`));
+  
+  CREATE TABLE `lacrei`.`endereco` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `rua` VARCHAR(45),
+  `numero` VARCHAR(5),
+  `complemento` VARCHAR(45),
+  `bairro` VARCHAR(45),
+  `cidade` VARCHAR(45),
+  `createdAt` DATE,
+  `updatedAt` DATE, 
+  PRIMARY KEY (`id`)
+  );
 
-INSERT INTO `profissionais`(
-	`id`,
-	`nome`,
-	`email`,
-	`prefixo`,
-	`registro`,
-	`senha`,
-	`data_cadastro`)
-
-values (
-	DEFAULT,
-	"Ana Não Sei das Quantas",
-	"ana@email.com",
-	"CREFITO",
-	1542,
-	"H2$Fx1504k@J%88&v2",
-	DEFAULT
-);
-
-INSERT INTO `profissionais`(
-	`id`,
-	`nome`,
-	`email`,
-	`prefixo`,
-	`registro`,
-	`senha`,
-	`data_cadastro`)
-
-values (
-	DEFAULT,
-	"Joãozinho Sei Lá o Que",
-	"jhonny@email.com",
-	"CREFITO",
-	2041,
-	"u8$001JF2@0g&12HK32",
-	DEFAULT
-);
-
-INSERT INTO `profissionais`(
-	`id`,
-	`nome`,
-	`email`,
-	`prefixo`,
-	`registro`,
-	`senha`,
-	`data_cadastro`)
-
-values (
-	DEFAULT,
-	"Pedro Sem Sobrenome",
-	"pedrinhoanonimo@email.com",
-	"CREFITO",
-	8413,
-	"iu7G3$@!fgc54@#5f¨K209",
-	DEFAULT
-);
-
-INSERT INTO `profissionais`(
-	`id`,
-	`nome`,
-	`email`,
-	`prefixo`,
-	`registro`,
-	`senha`,
-	`data_cadastro`)
-
-values (
-	DEFAULT,
-	"Laura Sem Pai",
-	"cademeupai@email.com",
-	"CREFITO",
-	6471,
-	"t1v64$@2x#k2$LOPc34*",
-	DEFAULT
+CREATE TABLE `lacrei`.`servico` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45),
+	`duracao` INT(3),
+	`valor` VARCHAR(15),
+	`modalidade` VARCHAR(20),
+   PRIMARY KEY (`id`),
+	CONSTRAINT `fk_servico_consultorio`
+	 FOREIGN KEY (`consultorio_id`)
+	 REFERENCES `lacrei`.`servico` (`id`)
+	 ON DELETE CASCADE
+	CONSTRAINT `fk_profissional_consultorio`
+	 FOREIGN KEY (`consultorio_id`)
+	 REFERENCES `lacrei`.`consultorio` (`id`)
+	 ON DELETE CASCADE,
+	CONSTRAINT `fk_consultorio_endereco`
+	 FOREIGN KEY (`endereco_id`)
+	 REFERENCES `lacrei`.`endereco` (`id`)
+	 ON DELETE CASCADE,
 );
