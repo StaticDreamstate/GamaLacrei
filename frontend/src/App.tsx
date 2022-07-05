@@ -1,5 +1,6 @@
 import React from "react"
-import Cadastro from "./pages/Cadastro"
+import DadosPessoais from "./components/Cadastro/Dados-pessoais/cadastro-dados-pessoais"
+import Header from "./Global-Components/Header"
 import Login from "./pages/Login"
 
 
@@ -8,7 +9,8 @@ function App() {
 
   return (
     <>
-      <Cadastro />
+    <Header />
+      <DadosPessoais/>
     </>
   )
 }
