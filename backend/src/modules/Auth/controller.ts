@@ -29,7 +29,7 @@ const controller = {
         nome: targetUser.name,
         nivel: targetUser.nivel,
       },
-      "CRUDGAMA"
+      "LACREI"
     );
 
     return res.json(token);
@@ -51,7 +51,7 @@ const controller = {
   
     const token = CryptoJS.AES.encrypt(
       `${savedUser.email}`,
-      "GAMACRUD"
+      "LACREI"
     ).toString();
     // enviar um email com o token
     savedUser.hashResetSenha = token;
@@ -64,7 +64,7 @@ const controller = {
   
     const { token, senha } = req.body;
 
-    const bytes = CryptoJS.AES.decrypt(token, "GAMACRUD");
+    const bytes = CryptoJS.AES.decrypt(token, "LACREI");
     const email = bytes.toString(CryptoJS.enc.Utf8);
 
     if (!email) {
