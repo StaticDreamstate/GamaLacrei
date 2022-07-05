@@ -1,6 +1,37 @@
-drop database lacrei;
+DROP DATABASE lacrei;
+CREATE DATABASE lacrei;
+USE lacrei;
 
-create database lacrei;
+CREATE TABLE `lacrei`.`endereco` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `rua` VARCHAR(45),
+  `numero` VARCHAR(5),
+  `complemento` VARCHAR(45),
+  `bairro` VARCHAR(45),
+  `cidade` VARCHAR(45),
+  `createdAt` DATE,
+  `updatedAt` DATE, 
+  PRIMARY KEY (`id`)
+  );
+
+CREATE TABLE `lacrei`.`consultorio` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `telefone_fixo` VARCHAR(20),
+  `telefone_celular` VARCHAR(20),
+  `whatsapp` VARCHAR(20),
+  `modalidade_atendimento` VARCHAR(255) NOT NULL,
+  `acessibilidade` VARCHAR(255) NOT NULL,
+  `horarios_funcionamento` VARCHAR(255) NOT NULL,
+  `dias_funcionamento` VARCHAR(255) NOT NULL,
+  `convenios` VARCHAR(255) NOT NULL,
+	`endereco_id` INT NOT NULL,
+  `createdAt` DATE,
+  `updatedAt` DATE,
+		PRIMARY KEY (`id`),
+		CONSTRAINT `fk_consultorio_endereco`
+		FOREIGN KEY (`endereco_id`)
+		REFERENCES `lacrei`.`endereco` (`id`)
+		ON DELETE CASCADE);
 
 CREATE TABLE `lacrei`.`profissional` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -16,54 +47,26 @@ CREATE TABLE `lacrei`.`profissional` (
 	`especialidade_clinica` VARCHAR(45),
 	`foto_identificacao` VARCHAR(255),
 	`carta_entrada` VARCHAR(255),
+	`consultorio_id` INT NOT NULL,
 	`createdAt` DATE, 
 	`updatedAt` DATE, 
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `UK_email` (`email`));
-
-	CREATE TABLE `lacrei`.`consultorio` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `telefone_fixo` VARCHAR(20),
-  `telefone_celular` VARCHAR(20),
-  `whatsapp` VARCHAR(20),
-  `modalidade_atendimento` VARCHAR(255) NOT NULL,
-  `acessibilidade` VARCHAR(255) NOT NULL,
-  `horarios_funcionamento` VARCHAR(255) NOT NULL,
-  `dias_funcionamento` VARCHAR(255) NOT NULL,
-  `convenios` VARCHAR(255) NOT NULL,
-  `createdAt` DATE,
-  `updatedAt` DATE,
-   PRIMARY KEY (`id`));
+		PRIMARY KEY (`id`),
+		UNIQUE KEY `UK_email` (`email`),
+		CONSTRAINT `fk_profissional_consultorio`
+	 	FOREIGN KEY (`consultorio_id`)
+	 	REFERENCES `lacrei`.`consultorio` (`id`)
+	 	ON DELETE CASCADE);
   
-  CREATE TABLE `lacrei`.`endereco` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `rua` VARCHAR(45),
-  `numero` VARCHAR(5),
-  `complemento` VARCHAR(45),
-  `bairro` VARCHAR(45),
-  `cidade` VARCHAR(45),
-  `createdAt` DATE,
-  `updatedAt` DATE, 
-  PRIMARY KEY (`id`)
-  );
-
 CREATE TABLE `lacrei`.`servico` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45),
 	`duracao` INT(3),
 	`valor` VARCHAR(15),
 	`modalidade` VARCHAR(20),
-   PRIMARY KEY (`id`),
-	CONSTRAINT `fk_servico_consultorio`
-	 FOREIGN KEY (`consultorio_id`)
-	 REFERENCES `lacrei`.`servico` (`id`)
-	 ON DELETE CASCADE
-	CONSTRAINT `fk_profissional_consultorio`
-	 FOREIGN KEY (`consultorio_id`)
-	 REFERENCES `lacrei`.`consultorio` (`id`)
-	 ON DELETE CASCADE,
-	CONSTRAINT `fk_consultorio_endereco`
-	 FOREIGN KEY (`endereco_id`)
-	 REFERENCES `lacrei`.`endereco` (`id`)
-	 ON DELETE CASCADE,
+	`consultorio_id` INT NOT NULL,
+  	PRIMARY KEY (`id`),
+		CONSTRAINT `fk_servico_consultorio`
+		FOREIGN KEY (`consultorio_id`)
+	 	REFERENCES `lacrei`.`consultorio` (`id`)
+	 	ON DELETE CASCADE
 );
