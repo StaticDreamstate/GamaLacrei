@@ -1,4 +1,4 @@
-import { FormStyled, H2Styled, PStyled, InputStyled, FormmStyled } from "./LoginStyled"
+import { FormStyled, H2Styled, PStyled, InputStyled, FormmStyled, DivStyled } from "./LoginStyled"
 import Linha from "../../assets/images/line.png"
 
 export default function LoginComponents(){
