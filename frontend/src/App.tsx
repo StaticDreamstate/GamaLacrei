@@ -1,6 +1,7 @@
 import React from "react"
-import Cadastro from "./pages/Cadastro"
+
 import Login from "./pages/Login"
+import Cadastro from "./pages/PreCadastro"
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
 
   return (
     <>
-      <Cadastro />
+      <Login />
     </>
   )
 }
