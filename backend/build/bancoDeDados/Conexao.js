@@ -24,7 +24,7 @@ class Conexao {
             throw erro;
         }
     }
-    getIstance() {
+    getInstance() {
         return this.instancia;
     }
     testeConexao() {

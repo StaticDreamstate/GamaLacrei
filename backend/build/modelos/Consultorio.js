@@ -1,14 +1,10 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Usuario = void 0;
+exports.Consultorio = void 0;
 const sequelize_1 = require("sequelize");
-const permissoes_1 = __importDefault(require("../constantes/permissoes"));
-class Usuario {
+class Consultorio {
     constructor(conexao) {
-        this.nomeModelo = "usuario";
+        this.nomeModelo = "Consultorio";
         const con = conexao.getInstance();
         this.instancia = con.define(this.nomeModelo, {
             id: {
@@ -16,21 +12,30 @@ class Usuario {
                 primaryKey: true,
                 autoIncrement: true,
             },
-            nivel: {
+            telefone_fixo: {
+                type: sequelize_1.DataTypes.STRING(20),
+            },
+            telefone_celular: {
+                type: sequelize_1.DataTypes.STRING(20),
+            },
+            whatsapp: {
+                type: sequelize_1.DataTypes.STRING(20),
+            },
+            modalidade_atendimento: {
+                type: sequelize_1.DataTypes.STRING(255),
+            },
+            acessibilidade: {
+                type: sequelize_1.DataTypes.STRING(255),
+            },
+            horarios_funcionamento: {
+                type: sequelize_1.DataTypes.STRING(255),
+            },
+            convenios: {
+                type: sequelize_1.DataTypes.STRING(255),
+            },
+            endereco_id: {
                 type: sequelize_1.DataTypes.INTEGER(),
-                defaultValue: permissoes_1.default.USUARIO,
-            },
-            nome: {
-                type: sequelize_1.DataTypes.STRING(255),
-            },
-            email: {
-                type: sequelize_1.DataTypes.STRING(255),
-            },
-            senha: {
-                type: sequelize_1.DataTypes.STRING(300),
-            },
-            hashResetSenha: {
-                type: sequelize_1.DataTypes.STRING(300),
+                references: { model: "endereco", key: "id" },
             },
             createdAt: {
                 type: sequelize_1.DataTypes.DATE(),
@@ -43,5 +48,4 @@ class Usuario {
         });
     }
 }
-exports.Usuario = Usuario;
-;
+exports.Consultorio = Consultorio;

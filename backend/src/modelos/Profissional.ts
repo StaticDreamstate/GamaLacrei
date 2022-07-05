@@ -26,10 +26,13 @@ export class Profissional {
         estado: {
           type: DataTypes.STRING(2),
         },
+        profissao: {
+          type: DataTypes.STRING(45),
+        },
         prefixo_profissao: {
           type: DataTypes.STRING(10),
         },
-        registro_profissional: {
+        registro_profissao: {
           type: DataTypes.STRING(45),
         },
         senha: {

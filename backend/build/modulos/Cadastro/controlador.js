@@ -18,8 +18,8 @@ const controlador = {
     cadastro(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const hashSenha = bcryptjs_1.default.hashSync(req.body.senha, 10);
-            const novoUsuario = yield modelos_1.user.instancia.create(Object.assign(Object.assign({}, req.body), { senha: hashSenha }));
-            return res.json(novoUsuario);
+            const novoProfissional = yield modelos_1.profissional.instancia.create(Object.assign(Object.assign({}, req.body), { senha: hashSenha }));
+            return res.json(novoProfissional);
         });
     }
 };
