@@ -6,6 +6,8 @@ const ambiente = {
     PORTA_BD: Number(process.env.PORTA_BD),
     USUARIO_BD: process.env.USUARIO_BD as string,
     SENHA_BD: process.env.SENHA_BD as string,
+    USUARIO_EMAIL: process.env.USUARIO_EMAIL as string,
+    SENHA_EMAIL: process.env.SENHA_EMAIL as string
 };
 
 export default ambiente;
