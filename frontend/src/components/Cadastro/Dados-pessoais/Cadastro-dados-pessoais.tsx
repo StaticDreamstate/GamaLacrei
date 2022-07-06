@@ -1,5 +1,5 @@
 import { HeaderStyled } from "../../../Global-Components/Header/header.style";
-import { DivDados } from "./cadastro-dados-pessoais.style";
+import { DivDados } from "./Cadastro-dados-pessoais.style";
 
 export default function DadosPessoais() {
   return (

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CadConsultorio = styled.div`
+export const CadastroServico = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,10 +42,6 @@ export const CadConsultorio = styled.div`
     padding: 0.5rem;
     margin-top: 0.2rem;
   } */
-
-  p.normas {
-    margin: 0;
-  }
   select {
     width: 100%;
     padding: 0.5rem;

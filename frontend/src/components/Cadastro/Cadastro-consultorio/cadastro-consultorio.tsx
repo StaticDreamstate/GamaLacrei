@@ -1,4 +1,4 @@
-import { CadConsultorio } from "../Cadastro-consultorio/cadastro-consultorio.style";
+import { CadConsultorio } from "./cadastro-consultorio.style";
 
 export function CadastroConsultorio() {
   return (
@@ -26,10 +26,17 @@ export function CadastroConsultorio() {
           <div className="field">
             <label htmlFor="especialidade">Acessibilidade da Clínica *</label>
             <select name="select">
-              <option value="valor1">Selecione as normas da clinica</option>
+              <option value="" disabled selected>
+                Selecione as normas da clinica
+              </option>
               <option value="valor2"></option>
               <option value="valor3"></option>
             </select>
+            <div className="normas">
+              <p className="normas">
+                Não sabe todas as normas?<a href="#">Clique aqui</a>{" "}
+              </p>
+            </div>
           </div>
           <div className="field">
             <label htmlFor="horarios">Horários e dias de funcionamento *</label>
@@ -38,7 +45,9 @@ export function CadastroConsultorio() {
           <div className="field">
             <label htmlFor="tipoconsulta">Tipo de consulta</label>
             <select name="select">
-              <option value="valor1">Escolha tipo de consulta</option>
+              <option value="" disabled selected>
+                Escolha tipo de consulta
+              </option>
               <option value="valor2"></option>
               <option value="valor3"></option>
             </select>
@@ -46,7 +55,9 @@ export function CadastroConsultorio() {
           <div className="field">
             <label htmlFor="convenio">Convenio Aceitos *</label>
             <select name="select">
-              <option value="valor1">Escolha convenios</option>
+              <option value="" disabled selected>
+                Escolha convenios
+              </option>
               <option value="valor2"></option>
               <option value="valor3"></option>
             </select>
