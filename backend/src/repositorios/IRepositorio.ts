@@ -1,7 +1,7 @@
 export default interface IRepositorio {
-  create(payload: any): Promise<any>;
-  update(): Promise<any>;
-  find(): Promise<any>;
-  findAll(payload: any): Promise<any>;
-  delete(): Promise<any>;
+  criar(payload: any): any;
+  atualizar(payload: any): any;
+  listarUm(): any;
+  listarTodos(): any;
+  deletar(): any;
 }

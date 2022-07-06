@@ -29,10 +29,10 @@ export class Profissional {
         profissao: {
           type: DataTypes.STRING(45),
         },
-        prefixo_profissao: {
+        prefixo_profissional: {
           type: DataTypes.STRING(10),
         },
-        registro_profissao: {
+        registro_profissional: {
           type: DataTypes.STRING(45),
         },
         senha: {

@@ -1,35 +1,33 @@
-import { profissionalRepositorio } from "../../../repositorios";
 import IRepositorio from "../../../repositorios/IRepositorio";
+import { criptografia } from "../../../adaptadores/criptografia";
 
 type CadastrarProfissionalPayload = {
-  id: number;
   estado: string;
   nome_completo: string;
   email: string;
   profissao: string;
-  prefixo_profissao: string;
-  registro_profissao: string;
+  prefixo_profissional: string;
+  registro_profissional: string;
   senha: string;
 };
 
-type ListarPayload = {
-  ativo: boolean;
-};
+
 export default class ProfissionalCasoDeUso {
   private repository: IRepositorio;
 
   constructor(ProfissionalRepositorio: IRepositorio) {
-    this.repository = profissionalRepositorio;
+    this.repository = ProfissionalRepositorio;
   }
 
   cadastrarProfissional(payload: CadastrarProfissionalPayload) {
-    const novoProfissional = this.repository.create(payload);
+    const novaSenha = criptografia.hash(payload.senha);
+    const novoProfissional = this.repository.criar(payload);
 
     return novoProfissional;
   }
 
-  listarProfissional(payload?: ListarPayload) {
-    const lista = this.repository.findAll(payload);
+  listarProfissional() {
+    const lista = this.repository.listarTodos();
     return lista;
   }
 

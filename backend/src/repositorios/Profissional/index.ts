@@ -1,38 +1,29 @@
 import { Profissional } from "../../modelos/Profissional";
 import IRepositorio from "../IRepositorio";
 
-export default class ProfissionalRepository implements IRepositorio {
+export default class ProfissionalRepositorio implements IRepositorio {
   private profissionalModelo: any;
 
   constructor(profissionalModelo: Profissional) {
-    this.profissionalModelo = profissionalModelo.nomeModelo;
+    this.profissionalModelo = profissionalModelo;
   }
 
-  async create(payload: {
+  async criar(payload: {
     estado: string;
     nome_completo: string;
     email: string;
     profissao: string;
-    prefixo_profissao: string;
-    registro_profissao: string;
+    prefixo_profissional: string;
+    registro_profissional: string;
     senha: string;
   }) {
-    return this.profissionalModelo.create(payload);
+    return this.profissionalModelo.instancia.create(payload);
   }
-  async update() {}
-  async find() {}
-  async findAll(payload: any) {
-    let filter = {};
-
-    if (payload.ativo) {
-      Object.assign(filter, {
-        where: {
-          ativo: true,
-        },
-      });
-    }
-
-    return this.profissionalModelo.findAll(filter);
+  async atualizar() {}
+  async listarUm() {}
+  async listarTodos() {
+    return this.profissionalModelo.instancia.findAll();
   }
-  async delete() {}
+
+  async deletar() {}
 }
