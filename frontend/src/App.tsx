@@ -1,4 +1,5 @@
 import React from "react";
+import { CadastroConsultorio } from "./components/Cadastro/Cadastro-consultorio/cadastro-consultorio";
 import DadosPessoais from "./components/Cadastro/Dados-pessoais/cadastro-dados-pessoais";
 import { DadosProfissionais } from "./components/Cadastro/Dados-profissionais/dados-profissionais";
 import Header from "./Global-Components/Header";
@@ -8,7 +9,7 @@ function App() {
   return (
     <>
       <Header />
-      <DadosProfissionais />
+      <CadastroConsultorio />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DivDados = styled.div`
+export const CadConsultorio = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,14 +29,24 @@ export const DivDados = styled.div`
     color: #000000;
   }
 
-  .field textarea {
+  .field input {
     width: 100%;
-    resize: none;
-    height: 200px;
-    border: 1px solid #515151;
+    padding: 0.5rem;
+    box-sizing: border-box;
     border-radius: 8px;
   }
-  .field textarea::placeholder {
-    padding: 5px;
+
+  /* .field select {
+    width: 100%;
+    max-width: 340px;
+    padding: 0.5rem;
+    margin-top: 0.2rem;
+  } */
+  select {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-sizing: border-box;
   }
 `;

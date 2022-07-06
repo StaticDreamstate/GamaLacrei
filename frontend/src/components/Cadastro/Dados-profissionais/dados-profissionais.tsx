@@ -4,9 +4,11 @@ export function DadosProfissionais() {
   return (
     <>
       <DivDadosProfissionais>
-        <h2>Foto com seu rosto e a carteira profissional ao lado *</h2>
-
         <form>
+          <div className="botao">
+            <button>Add Foto</button>
+            <a href="#"></a>
+          </div>
           <div className="field">
             <label htmlFor="name">Profissão *</label>
             <input type="text" name="profissao" id="profissao" />
@@ -28,6 +30,9 @@ export function DadosProfissionais() {
               Escreva o porquê gostaria de atuar no atendimento a comunidade
               LGBTQIAPN+ *
             </span>
+          </div>
+          <div className="botao">
+            <button>Proximo</button>
           </div>
         </form>
       </DivDadosProfissionais>

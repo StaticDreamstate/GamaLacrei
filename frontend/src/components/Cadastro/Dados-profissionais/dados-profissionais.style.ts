@@ -55,6 +55,26 @@ export const DivDadosProfissionais = styled.div`
     border-radius: 8px;
     border: 1px solid #515151;
   }
+
+  button {
+    font-weight: 700;
+    font-size: 18px;
+    font-family: "Nunito";
+    background: #eeeeee;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 32px;
+  }
+
+  .botao {
+    padding-left: 150px;
+    padding-top: 30px;
+    padding-bottom: 53px;
+  }
+
   /* .field textarea {
     width: 100%;
     padding: 4rem;
