@@ -1,6 +1,6 @@
-DROP DATABASE lacrei IF EXISTS;
-CREATE DATABASE lacrei;
-USE lacrei;
+DROP DATABASE IF EXISTS `lacrei`;
+CREATE DATABASE `lacrei`;
+USE `lacrei`;
 
 CREATE TABLE `lacrei`.`endereco` (
   `id` INT NOT NULL AUTO_INCREMENT,

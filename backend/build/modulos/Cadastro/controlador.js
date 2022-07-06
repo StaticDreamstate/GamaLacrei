@@ -14,11 +14,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const bcryptjs_1 = __importDefault(require("bcryptjs"));
 const modelos_1 = require("../../modelos");
+const logger_1 = __importDefault(require("../../infra/logger"));
 const controlador = {
     cadastro(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const hashSenha = bcryptjs_1.default.hashSync(req.body.senha, 10);
             const novoUsuario = yield modelos_1.user.instancia.create(Object.assign(Object.assign({}, req.body), { senha: hashSenha }));
+            logger_1.default.info(`[cadastro] [*] Novo usuário cadastrado - corpo=${JSON.stringify(req.body)} client_ip=${req.ips}`);
             return res.json(novoUsuario);
         });
     }
