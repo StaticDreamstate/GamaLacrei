@@ -6,12 +6,7 @@ import Header from "./Global-Components/Header";
 import Login from "./pages/Login";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <CadastroConsultorio />
-    </>
-  );
+  return <></>;
 }
 
 export default App;
