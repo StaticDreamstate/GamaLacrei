@@ -24,7 +24,7 @@ export class Profissional {
           unique: true,
         },
         estado: {
-          type: DataTypes.STRING(2),
+          type: DataTypes.STRING(20),
         },
         profissao: {
           type: DataTypes.STRING(45),

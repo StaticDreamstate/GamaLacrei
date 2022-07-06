@@ -20,7 +20,7 @@ class Profissional {
                 unique: true,
             },
             estado: {
-                type: sequelize_1.DataTypes.STRING(2),
+                type: sequelize_1.DataTypes.STRING(20),
             },
             profissao: {
                 type: sequelize_1.DataTypes.STRING(45),

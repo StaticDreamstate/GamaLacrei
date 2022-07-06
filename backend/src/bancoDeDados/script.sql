@@ -36,7 +36,7 @@ CREATE TABLE `lacrei`.`profissional` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome_completo` VARCHAR(200) NOT NULL,
   `email` VARCHAR(200) NOT NULL,
-	`estado` VARCHAR(2) NOT NULL,
+	`estado` VARCHAR(20) NOT NULL,
 	`profissao` VARCHAR(45) NOT NULL, 
 	`prefixo_profissao` VARCHAR(10) NOT NULL,
 	`registro_profissao` VARCHAR(45) NOT NULL,
