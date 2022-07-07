@@ -1,5 +1,5 @@
-import IRepositorio from "../../../repositorios/IRepositorio";
-import { criptografia } from "../../../adaptadores/criptografia";
+import IRepositorio from "../../../repositories/IRepositorio";
+import { criptografia } from "../../../adapters/criptografia";
 
 type CadastrarProfissionalPayload = {
   estado: string;

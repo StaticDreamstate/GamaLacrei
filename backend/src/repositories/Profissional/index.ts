@@ -1,4 +1,4 @@
-import { Profissional } from "../../modelos/Profissional";
+import { Profissional } from "../../models/Profissional";
 import IRepositorio from "../IRepositorio";
 
 export default class ProfissionalRepositorio implements IRepositorio {

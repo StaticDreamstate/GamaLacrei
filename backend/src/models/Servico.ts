@@ -1,9 +1,9 @@
 import { DataTypes } from "sequelize";
-import Conexao from "../bancoDeDados/Conexao";
+import Conexao from "../database/Conexao";
 
-export class Endereco {
+export class Servico {
   instancia: any;
-  nomeModelo: string = "Endereco";
+  nomeModelo: string = "Servico";
 
   constructor(conexao: Conexao) {
     const con = conexao.getInstance();
@@ -16,20 +16,21 @@ export class Endereco {
           primaryKey: true,
           autoIncrement: true,
         },
-        rua: {
+        nome: {
+          type: DataTypes.STRING(200),
+        },
+        duracao: {
+          type: DataTypes.INTEGER(),
+        },
+        valor: {
+          type: DataTypes.STRING(10),
+        },
+        modalidade: {
           type: DataTypes.STRING(45),
         },
-        numero: {
-          type: DataTypes.STRING(5),
-        },
-        complemento: {
-          type: DataTypes.STRING(45),
-        },
-        bairro: {
-          type: DataTypes.STRING(45),
-        },
-        cidade: {
-          type: DataTypes.STRING(45),
+        consultorio_id: {
+          type: DataTypes.INTEGER(),
+          references: { model: "consultorio", key: "id" },
         },
         createdAt: {
           type: DataTypes.DATE(),

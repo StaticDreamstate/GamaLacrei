@@ -1,4 +1,4 @@
-import { profissionalRepositorio } from "../../../repositorios";
+import { profissionalRepositorio } from "../../../repositories";
 import ProfissionalCasoDeUso from "./ProfissionalCasoDeUso";
 
 const profissionalCasoDeUso = new ProfissionalCasoDeUso(profissionalRepositorio);

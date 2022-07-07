@@ -1,5 +1,5 @@
 import Express, { Application } from "express";
-import { conexaoMysql } from "../bancoDeDados";
+import { conexaoMysql } from "../database";
 
 import rotasBase from "./rotasBase";
 

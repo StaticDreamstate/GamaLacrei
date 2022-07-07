@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import Conexao from "../bancoDeDados/Conexao";
+import Conexao from "../database/Conexao";
 
 export class Consultorio {
   instancia: any;

@@ -1,5 +1,5 @@
 import Conexao from "./Conexao";
-import ambiente from "../infra/configuracoes/ambiente"
+import ambiente from "../infra/conf/ambiente"
 
 const conexaoMysql = new Conexao(ambiente.NOME_BD, ambiente.USUARIO_BD, ambiente.SENHA_BD, {
     dialect: "mysql",

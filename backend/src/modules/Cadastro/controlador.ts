@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import bcrypt from "bcryptjs";
-import { user } from "../../modelos";
+import { user } from "../../models";
 
 import logger from "../../infra/logger";
 

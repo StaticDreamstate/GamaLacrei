@@ -1,6 +1,6 @@
 import { Response, Request } from "express";
 import bcrypt from "bcryptjs";
-import { user } from "../../modelos";
+import { user } from "../../models";
 import jwt from "jsonwebtoken";
 import CryptoJS from "crypto-js";
 
