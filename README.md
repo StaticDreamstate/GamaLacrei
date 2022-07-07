@@ -1,36 +1,33 @@
-<h3>Hands On voluntário da Gama Academy (HandsOn 4).</h3>
-<br>
+<div>
+  <img src="https://user-images.githubusercontent.com/90655270/161388302-145d58d6-723a-4dc1-97e7-80133dfa4c3a.png" width="100px">
+  <img alt="Stack Hacker" src="https://img.shields.io/static/v1?label=stack&message=hacker&color=success&labelColor=grey">
+</div>
 
-<p>Exercício multstack completo em Front End, Back End e UX/UI Desgin. Os seguintes membros formam o grupo 
-de colaboradores: </p>
-<br>
+<h1 align="center">Projeto Lacrei 🌈 </h1>
 
-<h4>Time UX/UI</h4>
-<br>
-<li>Dandara Mendes</li>
-<li>Fabrício Silva</li>
-<li>Matheus Marques</li>
-<br>
+Nesse projeto, o desafio proposto foi desenvolver um cadastro e página de perfil que contenha login, cadastro e perfil da pessoa profissional para a Lacrei, visando automatizar o processo atual para assim proporcionar uma melhor experiência para os profissionais, fazendo com que eles se cadastrem e se tornem parceiros.
 
-<h4>Time Frontend</h4>
-<br>
-<ul>
-<a href="https://github.com/Egobbato/"><li>Eduardo Gobbato</li></a>
-<a href="https://github.com/joaotoni/"><li>João Antônio</li></a>
-<a href="https://github.com/JoaoVitorLiberato/"><li>João Vitor</li></a>
-</ul>
-<br>
+## :wrench: Tecnologias aplicadas:
+![JavaScript](https://img.shields.io/badge/-JavaScipt-yellow) ![NodeJS](https://img.shields.io/badge/-NODE.JS-brightgreen) ![MySQL](https://img.shields.io/badge/-MySQL-blue)
 
-<h4>Time Backend</h4>
-<br>
-<ul>
-<a href="https://github.com/99arielsr/"><li>Ariel Rodrigues</li></a>
-<a href="https://github.com/PabloCariello/PabloCariello"><li>Pablo Cariello</li></a>
-<a href="https://github.com/StaticDreamstate/"><li>Yuri</li></a>
-</ul>
-<br>
+## Conhecimentos aplicados:
+- MySQL para criação do banco de dados;
+- API REST para criação de rotas;
+- NodeJs e ExpressJS para validação e autenticação de usuário.
 
-<h3>Documentação do Projeto</h3>
-<br>
-Disponível <a href="#">aqui.</a>
+## Funcionalidades criadas: 
 
+- 
+- 
+- 
+- 
+---
+
+## :link: [Documentação API.](https://github.com/StaticDreamstate/GamaLacrei)
+
+## :computer: Desenvolvedores Front-end
+[<img src="https://avatars.githubusercontent.com/u/102391940?v=4" width=65> <br> <sub>Eduardo Gobbato</sub>](https://github.com/Egobbato) | [<img src="https://avatars.githubusercontent.com/u/94007161?v=4" width=65> <br> <sub>João Antonio M. Taveira</sub>](https://github.com/joaotoni) | [<img src="https://avatars.githubusercontent.com/u/101505157?v=4" width=65> <br> <sub>João Vitor L. de Oliveira</sub>](https://github.com/JoaoVitorLiberato) ||  <br>
+| :---: | :---: | :---: | :---: | :---:
+## :computer: Desenvolvedores Back-end
+[<img src="https://avatars.githubusercontent.com/u/95944401?v=4" width=65> <br> <sub>Ariel Rodrigues</sub>](https://github.com/99arielsr) | [<img src="https://avatars.githubusercontent.com/u/94507396?v=4" width=65> <br> <sub>Pablo Cariello</sub>](https://github.com/PabloCariello) | [<img src="https://avatars.githubusercontent.com/u/102414254?v=4" width=65> <br> <sub>Yuri Felipe Scabio</sub>](https://github.com/StaticDreamstate) ||  <br>
+| :---: | :---: | :---: | :---: | :---: |
