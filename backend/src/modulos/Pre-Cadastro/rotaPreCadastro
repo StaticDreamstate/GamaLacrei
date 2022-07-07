@@ -1,0 +1,11 @@
+import { Router } from "express";
+import controlador from "./controlador";
+
+const rotaPreCadastro = Router();
+
+rotaPreCadastro.post("/pre-cadastro", controlador.cadastro);
+rotaPreCadastro.post("/pre-cadastro/dados", controlador.cadastro);
+rotaPreCadastro.post("/pre-cadastro/outros-estados", controlador.cadastro);
+
+
+export default rotaPreCadastro;
