@@ -53,4 +53,25 @@ export const CadConsultorio = styled.div`
     border-radius: 8px;
     box-sizing: border-box;
   }
+
+  .botao {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .botao button {
+    font-weight: 700;
+    font-size: 18px;
+    font-family: "Nunito";
+    background: #eeeeee;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 32px;
+  }
 `;

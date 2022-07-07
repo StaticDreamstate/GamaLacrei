@@ -2,31 +2,86 @@ import styled from "styled-components";
 
 export const NavStyled = styled.nav`
 
-    ul{
-        width: 100%;
-        list-style: none;
+   
+    top: 0;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+   
+    .list {
+        list-style-type: none;
         display: flex;
-        box-sizing: border-box;
-        
+        justify-content: end;
+        align-items: center;
+        position: relative;
+    }
+    .items {
+        margin-right: 90px;
+        font-family: 'Nunito' sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: #1F1F1F;
+        cursor: pointer;
 
-        
-        li{
-           padding: 10px 30px;
-           font-family: 'Nunito', sans-serif;
-           font-style: normal;
-           font-weight: 700;
-           font-size: 16px;
-           line-height: 150%;
-           color: #000;
-           cursor: pointer;
-
-           &:hover{
-                color: #DF1098 ;
-                transition: 0.4s all ease-in-out;
-           }
-
+       
+       
+        &:hover{
+            padding-bottom: 3px ;
+            color: #018762;
+            border-bottom: 3px solid #018762;
+            transition: 0.2s all ease-in-out;
         }
     }
 
+    .btn {
+        display: none;
+        position: absolute;
+        right: 10px;
+        top: 7px;
+        background-color: #fff;
+        
+    }
 
-`
+
+    @media screen and (max-width: 900px){
+        .list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .items:nth-child(1){
+            margin-top: 50px;
+        }
+
+        .items {
+            width: 100%;
+            text-align: center;
+            margin-right: 0px;
+            padding: 20px 0;
+            &:hover{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .btn {
+            display: block;
+            width: 70px;
+            height: 43px;
+            border: none;
+            z-index: 1;
+           
+            &:hover{
+            background: #018762;
+
+        }
+        }
+
+    }
+
+`;

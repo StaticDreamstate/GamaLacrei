@@ -1,44 +1,47 @@
 import styled from "styled-components"
 
+export const DropStyled = styled.div`
 
-
-
-
-export  const DivStyled = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 90vh;
-    padding: 0 2rem;
-    
-    
-    
+    min-height: 100vh;
+    box-sizing: border-box;
+  
     form{
         width: 100%;
         max-width: 480px;
-        padding: 0.5rem;
-    }
-
-    .field{
-        padding-bottom: 0.5rem;
-    }
-
-    .field label{
-        display: block;
-        font-family: 'Nunito', sans-serif;
+        font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 700;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 150%;
-        color: #585858;
-        padding-bottom: 0.2rem;
+        color: #2D2D2D;
     }
 
-    .field input{
-        width: 100%;
-        padding: 0.5rem;
+    .btnCentralizar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .actions button{
+        text-align: center;
+        padding: 10px 32px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        color: #515151;
+        border: none;
+        background: #CFCFCF;
+        cursor: pointer;
+    }
+
+    @media(max-width: 360px) {
+        margin: 10px;
     }
     
-
-`
+    
+`;

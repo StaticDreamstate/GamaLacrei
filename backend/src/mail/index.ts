@@ -1,5 +1,5 @@
 import nodemailer from "nodemailer";
-import emailConf from "../infra/configuracoes/smtp";
+import emailConf from "../infra/conf/smtp";
 
 const transport = nodemailer.createTransport({
     host: emailConf.host,

@@ -1,4 +1,5 @@
 
+
 import { SectionStyled, DivStyled, DivImgStyled, LastSection } from "./styled"
 import Logo from "../../assets/images/lacrei.png"
 import Face from "../../assets/icons/Face.png"
@@ -66,4 +67,7 @@ export default function Footer(){
         
         </div>
     )
+
+
+
 }
