@@ -70,14 +70,18 @@ export const DivDadosProfissionais = styled.div`
   }
 
   .botao {
-    padding-left: 150px;
-    padding-top: 30px;
-    padding-bottom: 53px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
 
-  /* .field textarea {
+  textarea {
     width: 100%;
     padding: 4rem;
     resize: none;
-  } */
+    box-sizing: border-box;
+    border: 1px solid #515151;
+    border-radius: 8px;
+  }
 `;

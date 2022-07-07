@@ -61,6 +61,9 @@ export function CadastroConsultorio() {
               <option value="valor2"></option>
               <option value="valor3"></option>
             </select>
+            <div className="botao">
+              <button type="submit">Continuar</button>
+            </div>
           </div>
         </form>
       </CadConsultorio>

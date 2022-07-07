@@ -6,8 +6,7 @@ export function DadosProfissionais() {
       <DivDadosProfissionais>
         <form>
           <div className="botao">
-            <button>Add Foto</button>
-            <a href="#"></a>
+            <button type="submit">Add Foto</button>
           </div>
           <div className="field">
             <label htmlFor="name">Profissão *</label>
@@ -25,14 +24,14 @@ export function DadosProfissionais() {
           </div>
           <div className="field">
             <label htmlFor="CartaDeEntrada">Carta de entrada</label>
-            <input type="text" name="cartaentrada" id="cartaentrada" />
             <span>
               Escreva o porquê gostaria de atuar no atendimento a comunidade
               LGBTQIAPN+ *
             </span>
+            <textarea name="carta" id="carta" required></textarea>
           </div>
           <div className="botao">
-            <button>Proximo</button>
+            <button type="submit">Proximo</button>
           </div>
         </form>
       </DivDadosProfissionais>
