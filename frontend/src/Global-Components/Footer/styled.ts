@@ -1,5 +1,5 @@
 import styled from "styled-components"
 
-export const FormStyled = styled.form`
+export const SectionStyled = styled.section`
 
 `
