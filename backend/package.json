@@ -1,42 +1,35 @@
 {
-  "name": "backend",
+  "name": "clean",
   "version": "1.0.0",
-  "description": "API for Gama Lacrei ",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/StaticDreamstate/GamaLacrei.git"
-  },
-  "keywords": [
-    "GamaAcademy",
-    "GamaLacrou",
-    "HandsOn4"
-  ],
-  "author": "HandsOn4 Team",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/StaticDreamstate/GamaLacrei/issues"
-  },
-  "homepage": "https://github.com/StaticDreamstate/GamaLacrei#readme",
   "dependencies": {
+    "@types/crypto-js": "^4.1.1",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/sequelize": "^4.28.13",
     "bcryptjs": "^2.4.3",
     "crypto-js": "^4.1.1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.3",
+    "nodemailer": "^6.7.6",
     "sequelize": "^6.21.2",
-    "ts-node-dev": "^2.0.0"
+    "winston": "^3.8.1"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.3.0",
     "@types/bcryptjs": "^2.4.2",
-    "@types/crypto-js": "^4.1.1",
     "@types/express": "^4.17.13",
-    "@types/jsonwebtoken": "^8.5.8",
+    "@types/node": "^18.0.1",
+    "@types/nodemailer": "^6.4.4",
     "sequelize-cli": "^6.4.1",
     "typescript": "^4.7.4"
-  }
+  },
+  "description": ""
 }
