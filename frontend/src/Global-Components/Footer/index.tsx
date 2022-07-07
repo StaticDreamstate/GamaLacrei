@@ -1,29 +1,31 @@
 import { recursosArray } from "../../assets/icons"
+import { SectionStyled, DivStyled } from "./styled"
+import Logo from "../../assets/images/lacrei.png"
 
 export default function Footer(){
     return(
-        <section>
+        <SectionStyled>
             <div>
-                <img src="" alt="" />
+                <img src={Logo} alt="" />
             </div>
-            <div>
+            <DivStyled>
                 <h5>Lacrei</h5>
                 <a>Início</a>
                 <a>Quem somos</a>
                 <a>Acessibilidade</a>
-            </div>
-            <div>
+            </DivStyled>
+            <DivStyled>
                 <h5>Saúde</h5>
                 <a>Lacrei Pessoas Usuárias</a>
                 <a>Lacrei Profissional da Saúde</a>
-            </div>
-            <div>
-                <h5>Segurança e privacidade</h5>
+            </DivStyled>
+            <DivStyled>
+                <h5 className="h5">Segurança e privacidade</h5>
                 <a>Portal de segurança e privacidade</a>
                 <a>Política de privacidade</a>
                 <a>Termo de uso</a>
                 <a>Direitos de Titular</a>
-            </div>
+            </DivStyled>
             <div>
                 <h5>Redes sociais</h5>
                 {recursosArray.map((element,index)=>(
@@ -33,6 +35,6 @@ export default function Footer(){
                 </div>
                 ))}
             </div>
-        </section>
+        </SectionStyled>
     )
 }
