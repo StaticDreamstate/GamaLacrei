@@ -1,6 +1,6 @@
-import { profissional, consultorio, endereco, servico } from "../models";
-import ProfissionalRepositorio from "./Profissional";
+import PreCadastroRepository from "./pre-cadastro";
+import { cadastro } from "../models";
 
-const profissionalRepositorio = new ProfissionalRepositorio(profissional);
+const preCadastroRepository = new PreCadastroRepository(cadastro);
 
-export { profissionalRepositorio };
+export { preCadastroRepository };

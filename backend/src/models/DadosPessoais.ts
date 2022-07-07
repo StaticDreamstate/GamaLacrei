@@ -1,9 +1,9 @@
 import { DataTypes } from "sequelize";
 import Connection from "../database/Connection";
 
-export class Consultorio {
+export class DadosPessoais {
   instance: any;
-  modelName: string = "Consultorio";
+  modelName: string = "DadosPessoais";
 
   constructor(conexao: Connection) {
     const con = conexao.getInstance();
@@ -16,36 +16,15 @@ export class Consultorio {
           primaryKey: true,
           autoIncrement: true,
         },
-        endereco_id: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-          references: { model: "enderecos", key: "id" }
-        },
-        celular: {
-          type: DataTypes.STRING(255),
-          allowNull: true,
-        },
-        fixo: {
-          type: DataTypes.STRING(255),
-          allowNull: true,
-        },
-        whatsapp: {
-          type: DataTypes.STRING(255),
-          allowNull: true,
-        },
-        tipoConsulta: {
+        foto: {
           type: DataTypes.STRING(255),
           allowNull: false,
         },
-        acessibilidade: {
+        fotoDescricao: {
           type: DataTypes.STRING(255),
           allowNull: false,
         },
-        horarioFuncionamento: {
-          type: DataTypes.STRING(255),
-          allowNull: false,
-        },
-        convenios: {
+        sobre: {
           type: DataTypes.STRING(300),
           allowNull: false,
         },
@@ -57,7 +36,7 @@ export class Consultorio {
         },
       },
       {
-        tableName: "consultorio",
+        tableName: "dados_pessoais",
       }
     );
   }

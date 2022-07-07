@@ -1,37 +1,38 @@
 import Express, { Application } from "express";
-import { conexaoMysql } from "../database";
+import { mySqlConnection } from "../database";
 
-import rotasBase from "./rotasBase";
+import handleError from "../middlewares/handleError";
+import BaseRoutes from "../infra/BaseRoutes";
 
 type SetupOptions = {
-    teste?: boolean;
-    porta?: number;
+  isTest?: boolean;
+  port?: number;
 };
-
 export default class App {
-    private instancia: Application;
-    private portaPadrao: number = 4000;
+  private instance: Application;
+  private defaultPort: number = 4000;
 
-    constructor() {
-        this.instancia = Express();
-    }
+  constructor() {
+    this.instance = Express();
+  }
 
-    async setup(options: SetupOptions): Promise<void> {
-        const portaSelecionada = options.porta ? options.porta : this.portaPadrao;
-        this.instancia.use(Express.static('public'));
-        this.instancia.use(Express.json());
-        this.instancia.use(rotasBase);
-        
-        conexaoMysql.testeConexao();
-        if(options.teste) { return console.log("[OK] Teste"); }
-   
-        this.instancia.listen(portaSelecionada, () =>
-        console.log(`[OK] Servidor conectado. [Porta TCP ${portaSelecionada}]`));
+  async setup(options: SetupOptions): Promise<void> {
+    const selectedPort = options.port ? options.port : this.defaultPort;
+    this.instance.use(Express.static('public'));
+    this.instance.use(Express.json());
+    this.instance.use(BaseRoutes);
+    this.instance.use(handleError);
 
-    }
+    mySqlConnection.hasConnection();
 
-    getIstance() {
-        return this.instancia;
-    }
-};
+    if (options.isTest) return;
 
+    this.instance.listen(selectedPort, () =>
+      console.log(`[OK] Servidor escutando... [Porta TCP ${selectedPort}]`)
+    );
+  }
+
+  getInstance() {
+    return this.instance;
+  }
+}

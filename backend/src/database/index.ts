@@ -1,10 +1,10 @@
-import Conexao from "./Conexao";
-import ambiente from "../infra/conf/ambiente"
+import Connection from "./Connection";
+import env from "../infra/conf/env";
 
-const conexaoMysql = new Conexao(ambiente.NOME_BD, ambiente.USUARIO_BD, ambiente.SENHA_BD, {
+const mySqlConnection = new Connection(env.DB_NAME, env.DB_USER, env.DB_PASS, {
     dialect: "mysql",
-    port: ambiente.PORTA_BD,
-    host: ambiente.HOST_BD
+    port: env.DB_PORT,
+    host: env.DB_HOST
 });
 
-export { conexaoMysql };
+export { mySqlConnection };

@@ -1,9 +1,6 @@
 import App from "./infra/App";
-// import enviar from "./mail/";
 
 const application = new App();
 
-// application.setup({ porta: 4000, teste: true });
-
-application.setup({ porta: 4000 });
-// enviar();
+// application.setup({ port: 4000, isTest: true });
+application.setup({ port: 4000 });

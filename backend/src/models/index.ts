@@ -1,12 +1,27 @@
-import { conexaoMysql } from "../database";
-import { Profissional } from "./Profissional";
+import { mySqlConnection } from "../database";
+
+import { DadosPessoais } from "./DadosPessoais";
+import { Cadastro } from "./Cadastro";
 import { Consultorio } from "./Consultorio";
-import { Servico } from "./Servico";
-import { Endereco } from "./Endereco";
+import { DadosProfissionais } from "./DadosProfissionais";
+import { Enderecos } from "./Endereco";
+import { ListaEspera } from "./ListaEspera";
+import { Servicos } from "./Servicos";
 
-const profissional = new Profissional(conexaoMysql);
-const consultorio = new Consultorio(conexaoMysql);
-const servico = new Servico(conexaoMysql);
-const endereco = new Endereco(conexaoMysql);
+const dadosPessoais = new DadosPessoais(mySqlConnection);
+const dadosProfissionais = new DadosProfissionais(mySqlConnection);
+const enderecos = new Enderecos(mySqlConnection);
+const servicos = new Servicos(mySqlConnection);
+const consultorio = new Consultorio(mySqlConnection);
+const cadastro = new Cadastro(mySqlConnection);
+const listaEspera = new ListaEspera(mySqlConnection);
 
-export { profissional, consultorio, servico, endereco };
+export {
+  dadosPessoais,
+  dadosProfissionais,
+  enderecos,
+  servicos,
+  consultorio,
+  cadastro,
+  listaEspera,
+};
