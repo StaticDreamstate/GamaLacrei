@@ -10,17 +10,21 @@ Nesse projeto, o desafio proposto foi desenvolver um cadastro e página de perfi
 ## :wrench: Tecnologias aplicadas:
 ![JavaScript](https://img.shields.io/badge/-JavaScipt-yellow) ![NodeJS](https://img.shields.io/badge/-NODE.JS-brightgreen) ![MySQL](https://img.shields.io/badge/-MySQL-blue)
 
-## Conhecimentos aplicados:
-- MySQL para criação do banco de dados;
-- API REST para criação de rotas;
-- NodeJs e ExpressJS para validação e autenticação de usuário.
+## 🎯Objetivos 
 
-## Funcionalidades criadas: 
+- [x] Configuração de um banco de dados relacional.
+- [x] Criação de uma API com sistema de login, cadastro e exibição de perfil do profissional.
 
-- 
-- 
-- 
-- 
+---
+
+# 🔚Endpoints
+
+## [POST] [/pre-cadastro]
+Responsável por realizar o pré-cadastro do profissional, armazenando suas informações no banco de dados enquanto espera ser aprovado.
+
+## [GET] [/lista-pendentes]
+Responsável por exibir os profissionais com aprovação pendentes.
+
 ---
 
 ## :link: [Documentação API.](https://github.com/StaticDreamstate/GamaLacrei)
