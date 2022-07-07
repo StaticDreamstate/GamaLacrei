@@ -30,5 +30,5 @@ const express_1 = require("express");
 const ListaDeEsperaController = __importStar(require("./controller"));
 const validator_1 = __importDefault(require("./validator"));
 const routes = (0, express_1.Router)();
-routes.post("/lista-espera", validator_1.default, ListaDeEsperaController.cadastrar);
+routes.get("/lista-espera", validator_1.default, ListaDeEsperaController.cadastrar);
 exports.default = routes;

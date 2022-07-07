@@ -4,6 +4,6 @@ import ListaDeEsperaValidator from "./validator";
 
 const routes = Router();
 
-routes.post("/lista-espera", ListaDeEsperaValidator, ListaDeEsperaController.cadastrar);
+routes.get("/lista-espera", ListaDeEsperaValidator, ListaDeEsperaController.cadastrar);
 
 export default routes;
