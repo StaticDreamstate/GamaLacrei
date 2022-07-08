@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { DataStyled } from "./dadosP.style";
 
-export default function DadosPessoais() {
+export default function SegundoPasso() {
 
     return (
         <>

@@ -1,6 +1,6 @@
 import { DivStyledIsNot } from "./isNotSp.style";
 
-export default function isNotSp() {
+export default function NaoSp() {
     return (
         <>
         
