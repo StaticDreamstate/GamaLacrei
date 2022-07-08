@@ -5,7 +5,7 @@ interface IDropDown {
     value: number;
 }
 
-export default function PreCadastro() {
+export default function PrimeiroPasso() {
 
     const options: Array<IDropDown> = [
         { value: 0, label: 'São Paulo' },

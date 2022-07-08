@@ -7,10 +7,14 @@ import PreCadastro from './../components/PreCadastro/FirstStep/index';
 export default function  PreCadastroDados(){
     return(
         <>
-            <Header />
-            {/* <PreCadastro/> */}
-            <SegundoPasso/>
-
+           return(
+            <>
+                if () {
+                    
+                }
+            
+            </>
+           );
         </>
     )
 }

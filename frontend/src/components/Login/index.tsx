@@ -1,16 +1,16 @@
-
 import { FormStyled, H2Styled, PStyled, InputStyled, FormmStyled, DivStyled, DivStyledd, DivStyleddd , HrStyled } from "./LoginStyled"
 import Linha from "../../assets/images/line.png"
 import { useAuth } from "../../context/AuthProvider/useAuth";
-import { useState } from 'react';
+import React, { useState, createContext } from 'react';
+import { Link } from "react-router-dom";
 
 
 
 export default function LoginComponents(){
 
-    const [email, setEmail] = useState()
 
     return(
+        
         <DivStyled>
             <FormStyled>
                 <div>
@@ -31,7 +31,7 @@ export default function LoginComponents(){
                     </div>
                     <DivStyledd>
                         <h3>Quero ser ume profissional</h3>
-                        <button><span>Cadastrar</span></button>
+                        <Link className="btnCadastrar" to="/primeiropasso" >Cadastrar</Link>
                     </DivStyledd>
                 </FormmStyled>
             

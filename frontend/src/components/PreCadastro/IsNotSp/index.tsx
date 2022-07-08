@@ -21,7 +21,7 @@ export default function NaoSp() {
                 </div>
                 <div className="field">
                     <label htmlFor="prefixo">Prefixo do Conselho Profissional *</label>
-                    <select name="´prefixo" id="prefixo" required>
+                    <select name="prefixo" id="prefixo" required>
                         <option value="valor1">Prefixo</option>
                     </select>
                 </div>

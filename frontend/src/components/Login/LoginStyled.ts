@@ -44,6 +44,17 @@ export const DivStyled = styled.div`
    display :flex ;
    justify-content: center;
     margin-top: 50px;
+
+    .btnCadastrar{
+        text-decoration:  none;
+        width: 108px;
+        height: 48px;
+        background: #FFFFFF;
+        border: 2px solid #018762;
+        border-radius: 8px;
+        padding: 10px 30px;
+        color: #018762;
+    }
     
     
 
