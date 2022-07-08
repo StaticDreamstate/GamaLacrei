@@ -27,8 +27,6 @@ Responsável por exibir os profissionais com aprovação pendentes.
 
 ---
 
-## :link: [Documentação API.](https://github.com/StaticDreamstate/GamaLacrei)
-
 ## 🤝 Colaboradores:
 ---
 ## :computer: # Back-end
