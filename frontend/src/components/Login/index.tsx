@@ -1,7 +1,15 @@
+
 import { FormStyled, H2Styled, PStyled, InputStyled, FormmStyled, DivStyled, DivStyledd, DivStyleddd , HrStyled } from "./LoginStyled"
 import Linha from "../../assets/images/line.png"
+import { useAuth } from "../../context/AuthProvider/useAuth";
+import { useState } from 'react';
+
+
 
 export default function LoginComponents(){
+
+    const [email, setEmail] = useState()
+
     return(
         <DivStyled>
             <FormStyled>
@@ -32,3 +40,5 @@ export default function LoginComponents(){
         </DivStyled>
     )
 }
+
+

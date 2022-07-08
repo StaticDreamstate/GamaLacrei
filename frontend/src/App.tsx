@@ -1,13 +1,10 @@
-import { AuthProvider } from "./context/AuthProvider";
-
+import RouteComponent from "./Routes";
 
 
 export default function App() {
   return(
     <>
-        <AuthProvider>
-
-        </AuthProvider>
+      <RouteComponent/>
     </>
   )
 
