@@ -5,7 +5,7 @@
   "main": "build/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "mailtest": "node build/mailtest.js"
+    "mailtest": "node dist/mailtest.js"
   },
   "keywords": [],
   "author": "",
