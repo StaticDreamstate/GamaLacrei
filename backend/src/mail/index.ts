@@ -15,13 +15,13 @@ const transport = nodemailer.createTransport({
     }
 });
 
-export default async function enviar() {
+export default async function enviar(rem: string, dest: string, sub?: string, body?: string) {
 
     const emailEnviado = await transport.sendMail({
-        subject: "Teste de disparo de e-mail da api",
-        text: "Só trabalho sem diversão faz de Yuri um puta loucão.",
-        from: `Seu nome aqui <${emailConf.user}>`,
-        to: ['destinatario@email.com'] // Esse array pode ser usado para múltiplos destinatários.
+        subject: sub,
+        text: body,
+        from: `${rem} <${emailConf.user}>`,
+        to: dest.split(',') // Esse array pode ser usado para múltiplos destinatários.
     });
 
 }
