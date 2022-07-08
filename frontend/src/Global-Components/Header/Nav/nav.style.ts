@@ -5,7 +5,7 @@ export const NavStyled = styled.nav`
    
     top: 0;
     width: 100%;
-    height: 50px;
+    height: 63px;
     margin: 0;
     padding: 0;
    
@@ -47,11 +47,14 @@ export const NavStyled = styled.nav`
 
 
     @media screen and (max-width: 900px){
+        
         .list {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-color: #fff;
+
 
         }
         .items:nth-child(1){
@@ -61,12 +64,7 @@ export const NavStyled = styled.nav`
         .items {
             width: 100%;
             text-align: center;
-            margin-right: 0px;
             padding: 20px 0;
-            &:hover{
-                width: 100%;
-                height: 100%;
-            }
         }
 
         .btn {
