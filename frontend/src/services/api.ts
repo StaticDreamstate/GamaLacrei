@@ -17,6 +17,6 @@ export function getUserLocalStorage(){
 }
 
 export const Api = Axios.create({
-    baseURL: 'https://some-domain.com/api/',
+    baseURL: 'http://localhost:4000',
     headers: {"Content-Type": "application/json"}
 })
