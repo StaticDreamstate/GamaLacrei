@@ -7,7 +7,8 @@ const env = {
     DB_USER: process.env.DB_USER as string,
     DB_PASS: process.env.DB_PASS as string,
     MAIL_USER: process.env.MAIL_USER as string,
-    MAIL_PASS: process.env.MAIL_PASS as string
+    MAIL_PASS: process.env.MAIL_PASS as string,
+    KEY: process.env.KEY as string
 };
 
 export default env;
