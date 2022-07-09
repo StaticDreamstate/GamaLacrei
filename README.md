@@ -60,7 +60,23 @@ Responsável por exibir os profissionais com aprovação pendentes.
 </table>
 
 ---
+<h2>Ferramentas Utilizadas: React-ts, Vite(Framework React), Styled Components(Framework de Estilização) </h2>
 
+<h3>Funcionalidades</h3
+Nossa aplicação tem como objetivo ser um protótipo modelavel, ou seja, possui uma estrutura de arquitetura de pastas
+<img src=![print2](https://user-images.githubusercontent.com/94007161/178102878-81a0eb7e-1cff-440b-909a-aa9dc5fe22e6.png)
+"/>
+  <ul>
+    Pasta "assets" tem como funcionalidade armazenar todos os arquivos de imagens<br/>
+    Pasta "components" tem como objetivo armazenar todos componentes que são utilizados pelo menos 2 vezes na aplicação<br/>
+    Pasta "pages" onde temos as estrutura das páginas<br/>
+    Pasta "context" utilizada para armazenar as rotas da API<br/>
+    Pasta "services" utilizada para armazenar a conexão com a API<br/>
+    No arquivo Routes.tsx, definimos todas rotas da aplicação<br/>
+    Pasta "Global-Components" tem como funcionalidade arquivas os componentes Globais(Header, Footer)<br/>
+  </ul>
+   
+  
 ## :computer: # Front-end
 <table>
   <tr>
